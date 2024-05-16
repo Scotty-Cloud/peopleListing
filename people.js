@@ -114,28 +114,34 @@ let people = [
 ];
 
 window.onload = function () {
+  // HTML element variables
   const peopleListTblBody = document.querySelector("#peopleListTblBody");
-
+  //functions
   function loadPeopleListTable() {
     for (const person of people) {
+      // Create an empty <tr> element and add it to the last
+      // position of the table
       let row = peopleListTblBody.insertRow();
-
+      // Create new cells (<td> elements) and add text
       let cell1 = row.insertCell(0);
       cell1.innerText = person.id;
 
       let cell2 = row.insertCell(1);
       cell2.innerText = person.firstName;
 
-      let cell3 = row.insertCell(2)
+      let cell3 = row.insertCell(2);
       cell3.innerText = person.lastName;
 
-      let cell4 = row.insertCell(3)
+      let cell4 = row.insertCell(3);
       cell4.innerText = person.email;
 
       let cell5 = row.insertCell(4);
-      cell5.innerText = person.ipAddress
+      cell5.innerText = person.ipAddress;
     }
   }
 
+  //event handling
+
+  //initial loading
   loadPeopleListTable();
 };
